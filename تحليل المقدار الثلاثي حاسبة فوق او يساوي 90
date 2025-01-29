@@ -1,0 +1,22 @@
+
+import math
+
+# مدخلات المستخدم
+a = int(input("أدخل معامل x^2 (a): "))
+b = int(input("أدخل معامل x (b): "))
+c = int(input("أدخل الثابت (c): "))
+
+# حساب المميز
+d = b**2 - 4*a*c
+
+# التحقق من المميز
+if d < 0:
+    print("لا يوجد حلول حقيقية (الجذور تخيلية).")
+elif d == 0:
+    root = -b / (2 * a)
+    print(f"الجذر الوحيد: {root}")
+else:
+    root1 = (-b - math.sqrt(d)) / (2 * a)
+    root2 = (-b + math.sqrt(d)) / (2 * a)
+    print(f"الجذر الأول: {root1}")
+    print(f"الجذر الثاني: {root2}")
